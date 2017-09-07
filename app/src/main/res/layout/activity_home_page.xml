@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:layout_editor_absoluteX="8dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                tools:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgvQcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/icon_home_qcode" />
+
+                <TextView
+                    android:id="@+id/txtvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_input_corner"
+                    android:drawableLeft="@mipmap/icon_home_search"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="搜索关键字" />
+
+                <ImageView
+                    android:id="@+id/imgvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/icon_home_message" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                android:id="@+id/buttonPanel"
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_one"
+                android:text="Button" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_two" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_four" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_five" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_red_six" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_one" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_two" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_four" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_five" />
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:background="@mipmap/home_bg_blue_six" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <com.joe.study.androidstudy.widget.ScaleButton
+                style="@style/HomePageButtonStyle"
+                android:layout_height="131dp"
+                android:layout_margin="1dp"
+                android:layout_weight="2"
+                android:background="@mipmap/home_bg_green_one" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.joe.study.androidstudy.widget.ScaleButton
+                        style="@style/HomePageButtonStyle"
+                        android:background="@mipmap/home_bg_green_two" />
+
+                    <com.joe.study.androidstudy.widget.ScaleButton
+                        style="@style/HomePageButtonStyle"
+                        android:background="@mipmap/home_bg_green_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.joe.study.androidstudy.widget.ScaleButton
+                        style="@style/HomePageButtonStyle"
+                        android:background="@mipmap/home_bg_green_four" />
+
+                    <com.joe.study.androidstudy.widget.ScaleButton
+                        style="@style/HomePageButtonStyle"
+                        android:background="@mipmap/home_bg_green_five" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
