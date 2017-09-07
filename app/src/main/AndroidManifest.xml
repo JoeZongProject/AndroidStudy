@@ -24,6 +24,7 @@
         <activity
             android:name=".view.home.SearchActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".view.home.AboutActivity"></activity>
     </application>
 
 </manifest>
