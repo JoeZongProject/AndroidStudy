@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import com.joe.study.androidstudy.R;
 import com.joe.study.androidstudy.common.GlideImageLoader;
@@ -54,5 +53,10 @@ public class HomePageActivity extends AppCompatActivity {
                 startActivity(new Intent(this, SearchActivity.class));
                 break;
         }
+    }
+
+    @OnClick(R.id.aboutPanel)
+    public void onViewClicked() {
+        startActivity(new Intent(this, AboutActivity.class));
     }
 }

@@ -193,8 +193,10 @@
                         android:background="@mipmap/home_bg_green_four" />
 
                     <com.joe.study.androidstudy.widget.ScaleButton
+                        android:id="@+id/aboutPanel"
                         style="@style/HomePageButtonStyle"
-                        android:background="@mipmap/home_bg_green_five" />
+                        android:background="@mipmap/home_bg_green_five"
+                        android:text="关 于" />
                 </LinearLayout>
             </LinearLayout>
 
