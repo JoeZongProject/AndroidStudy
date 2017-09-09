@@ -7,24 +7,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.joe.study.androidstudy.R;
+import com.joe.study.baselibrary.base.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AboutActivity extends AppCompatActivity {
-
-    @BindView(R.id.toolBar)
-    Toolbar toolBar;
+public class AboutActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         ButterKnife.bind(this);
-        toolBar.setTitle("关于");
-        toolBar.setTitleTextColor(ContextCompat.getColor(this, android.R.color.white));
-        this.setSupportActionBar(toolBar);
-        toolBar.setNavigationIcon(R.mipmap.icon_back_white);
+        setToolBar(R.id.toolBar, "关于");
     }
 
     @Override

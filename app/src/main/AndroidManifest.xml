@@ -24,7 +24,8 @@
         <activity
             android:name=".view.home.SearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.home.AboutActivity"></activity>
+        <activity android:name=".view.home.AboutActivity" />
+        <activity android:name=".view.button.statebutton.StateButtonActivity"></activity>
     </application>
 
 </manifest>
