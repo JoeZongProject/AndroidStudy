@@ -17,4 +17,12 @@ public class StateButtonActivity extends BaseActivity {
         ButterKnife.bind(this);
         setToolBar(R.id.toolBar, "");
     }
+
+    public void initView() {
+
+    }
+
+    public void initListeners() {
+
+    }
 }

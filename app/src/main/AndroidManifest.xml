@@ -4,7 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +29,8 @@
             android:name=".view.home.SearchActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".view.home.AboutActivity" />
-        <activity android:name=".view.button.statebutton.StateButtonActivity"></activity>
+        <activity android:name=".view.button.statebutton.StateButtonActivity" />
+        <activity android:name=".view.button.ButtonListActivity"></activity>
     </application>
 
 </manifest>
