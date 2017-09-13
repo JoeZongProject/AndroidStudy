@@ -1,10 +1,12 @@
 package com.joe.study.androidstudy.view.button;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
@@ -52,7 +54,7 @@ public class ButtonListActivity extends BaseActivity {
         buttonRecyclerView.setLayoutManager(layoutManager);
         buttonRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
         buttonRecyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallRotate);
-
+        buttonRecyclerView.setArrowImageView(R.mipmap.iconfont_downgrey);
         commonAdapter = new CommonAdapter<ButtonStudy>(this, R.layout.item_button_list, buttonStudyList) {
             @Override
             protected void convert(ViewHolder holder, ButtonStudy buttonStudy, int position) {
@@ -80,6 +82,11 @@ public class ButtonListActivity extends BaseActivity {
         commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+                ButtonStudy buttonStudy = buttonStudyList.get(position);
+                if (!TextUtils.isEmpty(buttonStudy.getTargetUrl())) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(buttonStudy.getTargetUrl()));
+                    startActivity(intent);
+                }
 
             }
 
@@ -126,4 +133,6 @@ public class ButtonListActivity extends BaseActivity {
                     }
                 });
     }
+
+
 }
