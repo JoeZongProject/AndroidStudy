@@ -5,13 +5,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.joe.study.androidstudy.R;
 import com.joe.study.androidstudy.data.model.button.ButtonStudy;
+import com.joe.study.androidstudy.util.ImageLoadUtil;
 import com.joe.study.baselibrary.base.BaseActivity;
 import com.joe.study.baselibrary.util.UIHelper;
 import com.joe.study.baselibrary.widget.recyclerview.CommonAdapter;
@@ -46,7 +49,8 @@ public class ButtonListActivity extends BaseActivity {
         setToolBar(R.id.toolBar, "Button学习列表");
         initView();
         initListeners();
-        loadButtonStudyListData();
+//        loadButtonStudyListData();
+        buttonRecyclerView.refresh();
     }
 
     public void initView() {
@@ -60,6 +64,7 @@ public class ButtonListActivity extends BaseActivity {
             protected void convert(ViewHolder holder, ButtonStudy buttonStudy, int position) {
                 holder.setText(R.id.txtvButtonTitle, buttonStudy.getButtonTitle());
                 holder.setText(R.id.txtvButtonDesc, buttonStudy.getButtonDesc());
+                ImageLoadUtil.load(ButtonListActivity.this, holder.getView(R.id.imgvPic), buttonStudy.getPicUrl());
             }
         };
         buttonRecyclerView.setAdapter(commonAdapter);
@@ -82,12 +87,12 @@ public class ButtonListActivity extends BaseActivity {
         commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                ButtonStudy buttonStudy = buttonStudyList.get(position);
+                ButtonStudy buttonStudy = buttonStudyList.get(position - 1);
                 if (!TextUtils.isEmpty(buttonStudy.getTargetUrl())) {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(buttonStudy.getTargetUrl()));
+                    intent.putExtra(ButtonStudy.class.getSimpleName(), buttonStudy);
                     startActivity(intent);
                 }
-
             }
 
             @Override
@@ -133,6 +138,4 @@ public class ButtonListActivity extends BaseActivity {
                     }
                 });
     }
-
-
 }

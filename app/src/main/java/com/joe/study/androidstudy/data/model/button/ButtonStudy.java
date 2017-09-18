@@ -13,6 +13,10 @@ public class ButtonStudy extends BmobObject {
     private String targetUrl;
     private String htmlUrl;
     private String picUrl;
+    private String gitUrl;
+    private String projectTitle;
+    private String demoUrl;
+    private String permissionDesc;//侵权描述
 
     public String getButtonTitle() {
         return buttonTitle;
@@ -32,5 +36,21 @@ public class ButtonStudy extends BmobObject {
 
     public String getPicUrl() {
         return picUrl;
+    }
+
+    public String getGitUrl() {
+        return gitUrl;
+    }
+
+    public String getProjectTitle() {
+        return projectTitle;
+    }
+
+    public String getDemoUrl() {
+        return demoUrl;
+    }
+
+    public String getPermissionDesc() {
+        return permissionDesc;
     }
 }

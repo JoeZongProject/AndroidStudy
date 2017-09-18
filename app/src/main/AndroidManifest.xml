@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,8 +29,10 @@
         <activity
             android:name=".view.home.SearchActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.home.AboutActivity" />
-        <activity android:name=".view.button.statebutton.StateButtonActivity" >
+        <activity
+            android:name=".view.home.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.button.statebutton.StateButtonActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -43,7 +46,9 @@
                     android:scheme="AndroidStudy" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.button.ButtonListActivity"></activity>
+        <activity
+            android:name=".view.button.ButtonListActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

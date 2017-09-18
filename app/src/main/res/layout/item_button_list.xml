@@ -15,6 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -39,10 +40,11 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/imgvPic"
             android:layout_width="60dp"
             android:layout_height="80dp"
-            android:layout_marginLeft="2dp"
-            android:background="@color/gray_dedede" />
+            android:background="@color/gray_dedede"
+            android:scaleType="fitXY" />
     </LinearLayout>
 
     <View

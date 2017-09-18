@@ -4,9 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
     android:orientation="vertical"
     tools:context="com.joe.study.androidstudy.view.button.statebutton.StateButtonActivity">
 
     <include layout="@layout/layout_toolbar" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:flexWrap="wrap">
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="点击文字变化"
+            app:normalBackgroundColor="@color/white"
+            app:normalStrokeColor="@color/colorPrimary"
+            app:normalStrokeWidth="2dp"
+            app:normalTextColor="@color/colorAccent"
+            app:pressedBackgroundColor="@color/white"
+            app:pressedStrokeColor="@color/orange_FF714F"
+            app:pressedStrokeWidth="2dp"
+            app:pressedTextColor="@color/orange_FF714F" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="加了圆角"
+            app:normalBackgroundColor="@color/white"
+            app:normalStrokeColor="@color/colorPrimary"
+            app:normalStrokeWidth="2dp"
+            app:normalTextColor="@color/colorAccent"
+            app:pressedBackgroundColor="@color/white"
+            app:pressedStrokeColor="@color/orange_FF714F"
+            app:pressedStrokeWidth="2dp"
+            app:pressedTextColor="@color/orange_FF714F"
+            app:radius="10dp" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:id="@+id/stateButtonDiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="又少了一个角"
+            app:normalBackgroundColor="@color/white"
+            app:normalStrokeColor="@color/colorPrimary"
+            app:normalStrokeWidth="2dp"
+            app:normalTextColor="@color/colorAccent"
+            app:pressedBackgroundColor="@color/white"
+            app:pressedStrokeColor="@color/orange_FF714F"
+            app:pressedStrokeWidth="2dp"
+            app:pressedTextColor="@color/orange_FF714F"
+            app:radius="10dp" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:id="@+id/different_radius_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="我是点击变化背景的"
+            android:textColor="@android:color/white"
+            app:normalBackgroundColor="@color/gray_7F7F7F"
+            app:pressedBackgroundColor="@color/colorPrimary" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="虚线，有没有？？"
+            app:normalBackgroundColor="@color/white"
+            app:normalStrokeColor="@color/orange_FF714F"
+            app:normalStrokeWidth="2dp"
+            app:normalTextColor="@color/orange_FF714F"
+            app:pressedBackgroundColor="@color/white"
+            app:pressedStrokeColor="@color/colorPrimary"
+            app:pressedStrokeWidth="2dp"
+            app:pressedTextColor="@color/colorPrimary"
+            app:radius="10dp"
+            app:strokeDashGap="5dp"
+            app:strokeDashWidth="5dp" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="圆角按钮哦"
+            android:textColor="@android:color/white"
+            app:normalBackgroundColor="@color/colorPrimary"
+            app:pressedBackgroundColor="@color/colorPrimaryDark"
+            app:radius="2dp"
+            app:round="true"
+            app:unableBackgroundColor="@android:color/holo_red_light" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:id="@+id/radius_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:text="实心的"
+            android:textColor="@android:color/white"
+            app:normalBackgroundColor="@color/darkRed"
+            app:pressedBackgroundColor="@color/watermelon_red"
+            app:radius="10dp"
+            app:unableBackgroundColor="@android:color/holo_red_light" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
 
 </LinearLayout>
