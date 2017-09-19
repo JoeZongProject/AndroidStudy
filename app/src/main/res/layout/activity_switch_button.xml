@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.joe.study.androidstudy.view.button.switchbutton.SwitchButtonActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_default"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/StyleTitleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是默认的哦！" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/StyleTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我是带文字的" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_text"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    app:kswTextOff="芝麻关门"
+                    app:kswTextOn="芝麻开门" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_text_state"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    app:kswTextOff="OFF"
+                    app:kswTextOn="On" />
+
+
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/StyleTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="来个自定义" />
+
+                    <TextView
+                        style="@style/StyleTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="魅族系统" />
+
+                    <TextView
+                        style="@style/StyleTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="小米系统" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/sb_custom"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:kswBackMeasureRatio="2.2"
+                        app:kswBackRadius="2dp"
+                        app:kswThumbRadius="2dp"
+                        app:kswTintColor="#49416E" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/sb_custom_flyme"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:kswBackDrawable="@drawable/flyme_back_drawable"
+                        app:kswBackMeasureRatio="2.2"
+                        app:kswThumbDrawable="@drawable/flyme_thumb_drawable"
+                        app:kswThumbHeight="16dp"
+                        app:kswThumbWidth="16dp" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/sb_custom_miui"
+                        style="@style/SwitchButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:kswBackDrawable="@drawable/miui_back_drawable"
+                        app:kswBackMeasureRatio="2"
+                        app:kswThumbDrawable="@drawable/miui_thumb_drawable"
+                        app:kswThumbHeight="18dp"
+                        app:kswThumbWidth="18dp" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                style="@style/StyleTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色也是可以自己定义的哦" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_tint_color_0"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:kswTintColor="#B12354" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_tint_color_1"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:kswTintColor="#F2b349" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_tint_color_2"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:kswTintColor="#0125A4" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_tint_color_3"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:kswTintColor="#da25A4" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_tint_color_4"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    app:kswTintColor="#3ab89c" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/StyleTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android PK Ios" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_md"
+                    style="@style/SwitchButtonStyleMD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_ios"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:kswAnimationDuration="300"
+                    app:kswBackDrawable="@drawable/ios_back_drawable"
+                    app:kswBackMeasureRatio="1.4"
+                    app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                    app:kswThumbMarginBottom="-8dp"
+                    app:kswThumbMarginLeft="-5dp"
+                    app:kswThumbMarginRight="-5dp"
+                    app:kswThumbMarginTop="-2.5dp" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/StyleTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我也是可以设置不可用的哦" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_disable"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_disable_checked"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:enabled="false" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

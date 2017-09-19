@@ -27,12 +27,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.home.SearchActivity"
+            android:name=".view.third.tongchen.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.home.AboutActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.button.statebutton.StateButtonActivity">
+        <activity
+            android:name=".view.button.statebutton.StateButtonActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -49,7 +51,25 @@
         <activity
             android:name=".view.button.ButtonListActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.home.SplashActivity"></activity>
+        <activity android:name=".view.home.SplashActivity" />
+        <activity android:name=".view.third.tongchen.TongChenHomeActivity" />
+        <activity
+            android:name=".view.button.switchbutton.SwitchButtonActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="SwitchButton"
+                    android:path="/openwith"
+                    android:scheme="AndroidStudy" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.textview.TextViewListActivity"></activity>
     </application>
 
 </manifest>
