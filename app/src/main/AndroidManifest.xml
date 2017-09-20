@@ -69,7 +69,25 @@
                     android:scheme="AndroidStudy" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.textview.TextViewListActivity"></activity>
+        <activity
+            android:name=".view.textview.TextViewListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.textview.SlantedTextView.SlantedTextViewActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="SlantedTextView"
+                    android:path="/openwith"
+                    android:scheme="AndroidStudy" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

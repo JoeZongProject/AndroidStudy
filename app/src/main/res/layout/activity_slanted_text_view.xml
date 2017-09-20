@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.joe.study.androidstudy.view.textview.SlantedTextView.SlantedTextViewActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:paddingTop="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.haozhang.widget.MainActivity">
+
+        <ImageView
+            android:id="@+id/left_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/left_text"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            app:slantedBackgroundColor="@color/colorPrimary"
+            app:slantedLength="25dp"
+            app:slantedMode="left"
+            app:slantedText="Android"
+            app:slantedTextColor="@color/white"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/right_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/left_img"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+        <com.haozhang.lib.SlantedTextView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/right_img"
+            app:slantedBackgroundColor="@color/colorAccent"
+            app:slantedLength="25dp"
+            app:slantedMode="left_triangle"
+            app:slantedText="Right"
+            app:slantedTextColor="@color/white"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/right_img"
+            android:layout_marginTop="17dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/test"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/imageView"
+            app:slantedBackgroundColor="@color/darkRed"
+            app:slantedLength="30dp"
+            app:slantedMode="left_bottom"
+            app:slantedText="PHP"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/img_left_bt_tri"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/slv_left_bt_tri"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/img_left_bt_tri"
+            app:slantedBackgroundColor="@color/red"
+            app:slantedLength="20dp"
+            app:slantedMode="left_bottom_triangle"
+            app:slantedText="WEB"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/left_img"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/slv_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignRight="@+id/img_right"
+            android:layout_alignTop="@+id/img_right"
+            app:slantedBackgroundColor="@color/orange1"
+            app:slantedLength="25dp"
+            app:slantedMode="right"
+            app:slantedText="Hello"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/img_right_tri"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/imageView"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/slv_right_tri"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/img_right_tri"
+            app:slantedBackgroundColor="@color/blue1"
+            app:slantedLength="20dp"
+            android:layout_alignParentRight="true"
+            app:slantedMode="right_triangle"
+            app:slantedText="Push"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/img_right_bt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/img_left_bt_tri"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/slv_right_bt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/img_right_bt"
+            android:layout_alignParentRight="true"
+            app:slantedBackgroundColor="@color/red"
+            app:slantedLength="25dp"
+            app:slantedMode="right_bottom"
+            app:slantedText="JAVA"
+            app:slantedTextSize="10sp" />
+
+        <ImageView
+            android:id="@+id/img_right_bt_tri"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/img_left_bt_tri"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_slantedtextview_bg" />
+
+
+        <com.haozhang.lib.SlantedTextView
+            android:id="@+id/slv_right_bt_tri"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/img_right_bt_tri"
+            android:layout_alignParentRight="true"
+            app:slantedBackgroundColor="@color/watermelon_red"
+            app:slantedLength="20dp"
+            app:slantedMode="right_bottom_triangle"
+            app:slantedText="C#"
+            app:slantedTextSize="10sp" />
+    </RelativeLayout>
+</LinearLayout>
