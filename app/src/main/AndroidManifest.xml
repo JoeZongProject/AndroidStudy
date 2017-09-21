@@ -88,6 +88,9 @@
                     android:scheme="AndroidStudy" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".view.home.BaseStudyActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

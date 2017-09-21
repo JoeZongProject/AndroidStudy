@@ -36,4 +36,9 @@ public class HomePageActivity extends AppCompatActivity {
     public void onTextViewClicked() {
         startActivity(new Intent(this, TextViewListActivity.class));
     }
+
+    @OnClick(R.id.basePanel)
+    public void onBaseClicked() {
+        startActivity(new Intent(this, BaseStudyActivity.class));
+    }
 }
