@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.joe.study.androidstudy.R;
+import com.joe.study.androidstudy.view.api.ApiActivity;
 import com.joe.study.androidstudy.view.button.ButtonListActivity;
 import com.joe.study.androidstudy.view.textview.TextViewListActivity;
 
@@ -40,5 +41,10 @@ public class HomePageActivity extends AppCompatActivity {
     @OnClick(R.id.basePanel)
     public void onBaseClicked() {
         startActivity(new Intent(this, BaseStudyActivity.class));
+    }
+
+    @OnClick(R.id.apiPanel)
+    public void onApiClicked() {
+        startActivity(new Intent(this, ApiActivity.class));
     }
 }

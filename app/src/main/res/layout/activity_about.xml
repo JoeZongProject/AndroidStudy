@@ -9,4 +9,26 @@
 
     <include layout="@layout/layout_toolbar" />
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtvEmptyTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="不要急，正在整理中..."
+            android:textColor="@color/gray_9b9b9b"
+            android:visibility="gone" />
+
+        <com.joe.study.androidstudy.widget.ProgressWebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </FrameLayout>
 </LinearLayout>

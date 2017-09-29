@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.joe.study.androidstudy.view.api.ApiActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etUserNo"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_white_border1_maincolor_corner1"
+            android:gravity="center_vertical"
+            android:hint="userNo"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <com.joe.study.androidstudy.view.button.statebutton.StateButton
+            android:id="@+id/btnRefreshImToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="刷新生产IM Token"
+            android:textColor="@color/white"
+            app:normalBackgroundColor="@color/colorPrimary"
+            app:pressedBackgroundColor="@color/colorPrimaryDark"
+            app:radius="4dp"
+            app:unableBackgroundColor="@android:color/holo_red_light" />
+
+        <TextView
+            android:id="@+id/txtvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/gray_7F7F7F"
+            android:textSize="14sp"
+            tools:text="返回结果" />
+
+    </LinearLayout>
+
+</LinearLayout>

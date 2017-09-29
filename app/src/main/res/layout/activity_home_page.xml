@@ -204,7 +204,7 @@
                     android:layout_centerVertical="true"
                     android:background="@drawable/bg_border1_lightgray1_corner2"
                     android:padding="5dp"
-                    android:src="@mipmap/icon_button_expression" />
+                    android:src="@mipmap/icon_test_one_expression" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -237,100 +237,97 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_one" />
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_two" />
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_three" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_height="80dp"
             android:layout_marginTop="1dp"
             android:orientation="horizontal">
 
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_four" />
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_five" />
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:background="@mipmap/home_bg_blue_six" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <com.joe.study.androidstudy.widget.ScaleButton
-                style="@style/HomePageButtonStyle"
-                android:layout_height="131dp"
-                android:layout_margin="1dp"
-                android:layout_weight="2"
-                android:background="@mipmap/home_bg_green_one" />
-
-            <LinearLayout
+            <com.joe.study.androidstudy.widget.ScaleRelativeLayout
+                android:id="@+id/apiPanel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="1dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgvTest2Icon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_border1_lightgray1_corner2"
+                    android:padding="5dp"
+                    android:src="@mipmap/icon_test_two_expression" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imgvTest2Icon"
+                    android:orientation="vertical">
 
-                    <com.joe.study.androidstudy.widget.ScaleButton
-                        style="@style/HomePageButtonStyle"
-                        android:background="@mipmap/home_bg_green_two" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="API"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
-                    <com.joe.study.androidstudy.widget.ScaleButton
-                        style="@style/HomePageButtonStyle"
-                        android:background="@mipmap/home_bg_green_three" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="monospace"
+                        android:text="api接口测试"
+                        android:textColor="@color/gray_9b9b9b"
+                        android:textSize="12sp" />
+
                 </LinearLayout>
+
+
+            </com.joe.study.androidstudy.widget.ScaleRelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+            <com.joe.study.androidstudy.widget.ScaleRelativeLayout
+                android:id="@+id/aboutPanel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imgvTest3Icon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_border1_lightgray1_corner2"
+                    android:padding="5dp"
+                    android:src="@mipmap/icon_test_three_expression" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imgvTest3Icon"
+                    android:orientation="vertical">
 
-                    <com.joe.study.androidstudy.widget.ScaleButton
-                        style="@style/HomePageButtonStyle"
-                        android:background="@mipmap/home_bg_green_four" />
-
-                    <com.joe.study.androidstudy.widget.ScaleButton
-                        android:id="@+id/aboutPanel"
-                        style="@style/HomePageButtonStyle"
-                        android:background="@mipmap/home_bg_green_five"
-                        android:text="关 于" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="关  于"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
                 </LinearLayout>
-            </LinearLayout>
 
-
+            </com.joe.study.androidstudy.widget.ScaleRelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
