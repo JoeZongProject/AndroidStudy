@@ -1,14 +1,11 @@
 package com.joe.study.androidstudy.view.button.statebutton;
 
 import android.os.Bundle;
-import android.widget.Button;
 
 import com.joe.study.androidstudy.R;
-import com.joe.study.androidstudy.data.model.button.ButtonStudy;
+import com.joe.study.androidstudy.data.model.ShowInfo;
 import com.joe.study.androidstudy.dialog.GetPathDialog;
-import com.joe.study.androidstudy.view.button.ButtonListActivity;
 import com.joe.study.baselibrary.base.BaseActivity;
-import com.joe.study.baselibrary.util.UIHelper;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,7 +15,7 @@ public class StateButtonActivity extends BaseActivity {
     @BindView(R.id.stateButtonDiff)
     StateButton stateButtonDiff;
 
-    private ButtonStudy buttonStudy;
+    private ShowInfo showInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +23,7 @@ public class StateButtonActivity extends BaseActivity {
         setContentView(R.layout.activity_state_button);
         ButterKnife.bind(this);
         setToolBar(R.id.toolBar, "状态Button");
-        buttonStudy = (ButtonStudy) getIntent().getSerializableExtra(ButtonStudy.class.getSimpleName());
+        showInfo = (ShowInfo) getIntent().getSerializableExtra(ShowInfo.class.getSimpleName());
         initView();
         initListeners();
     }
@@ -39,11 +36,13 @@ public class StateButtonActivity extends BaseActivity {
         getToolbar().setOnMenuItemClickListener(item -> {
             switch (item.getItemId()) {
                 case R.id.menuActionGet:
-                    if (buttonStudy != null) {
-                        GetPathDialog.newInstance(buttonStudy.getProjectTitle(), buttonStudy.getGitUrl(), buttonStudy.getDemoUrl(), buttonStudy.getPermissionDesc())
+                    if (showInfo != null) {
+                        GetPathDialog.newInstance(showInfo.getProjectTitle(), showInfo.getGitUrl(), showInfo.getDemoUrl(), showInfo.getPermissionDesc())
                                 .setMargin(40)
                                 .show(getSupportFragmentManager());
                     }
+                    break;
+                default:
                     break;
             }
             return true;

@@ -31,6 +31,10 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -45,6 +49,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
     compile 'com.google.android:flexbox:0.3.0'
     compile 'com.google.code.gson:gson:2.7'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    provided 'com.squareup.okhttp3:okhttp:3.4.1'
 
 }

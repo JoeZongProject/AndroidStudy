@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.joe.study.androidstudy.R;
 import com.joe.study.androidstudy.data.base.BaseStudy;
 import com.joe.study.androidstudy.widget.ProgressWebView;
+import com.joe.study.androidstudy.widget.ProgressX5WebView;
 import com.joe.study.baselibrary.base.BaseActivity;
 
 import java.util.List;
@@ -21,7 +22,7 @@ import cn.bmob.v3.listener.FindListener;
 public class BaseStudyActivity extends BaseActivity {
 
     @BindView(R.id.webview)
-    ProgressWebView webview;
+    ProgressX5WebView webview;
     @BindView(R.id.txtvEmptyTip)
     TextView txtvEmptyTip;
 

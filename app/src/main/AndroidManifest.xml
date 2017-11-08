@@ -9,14 +9,36 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />    <!-- 如果需要精确定位的话请加上此权限 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
+        android:name=".view.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon_app_launcher_two"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
         <activity
             android:name=".view.home.HomePageActivity"
             android:screenOrientation="portrait">
@@ -48,9 +70,6 @@
                     android:scheme="AndroidStudy" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.button.ButtonListActivity"
-            android:screenOrientation="portrait" />
         <activity android:name=".view.home.SplashActivity" />
         <activity android:name=".view.third.tongchen.TongChenHomeActivity" />
         <activity
@@ -70,9 +89,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.textview.TextViewListActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".view.textview.SlantedTextView.SlantedTextViewActivity"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -91,7 +107,17 @@
         <activity
             android:name=".view.home.BaseStudyActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".view.api.ApiActivity"></activity>
+        <activity android:name=".view.api.ApiActivity" />
+        <activity android:name=".view.showview.ShowWebviewActivity" />
+        <activity android:name=".view.showview.ShowImageActivity" />
+        <activity android:name=".view.ViewListActivity"></activity>
+
+        <service
+            android:name="com.qq.e.comm.DownloadService"
+            android:exported="false" />
+        <activity
+            android:name="com.qq.e.ads.ADActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
     </application>
 
 </manifest>

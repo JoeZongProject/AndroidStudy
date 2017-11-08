@@ -1,15 +1,15 @@
-package com.joe.study.androidstudy.data.model.textview;
+package com.joe.study.androidstudy.data.base;
 
 import cn.bmob.v3.BmobObject;
 
 /**
- * @Author zongdongdong on 2017/9/20.
+ * @Author zongdongdong on 2017/11/1.
  * {@link }
  */
 
-public class TextViewStudy extends BmobObject {
-    private String textViewTitle;
-    private String textViewDesc;
+public class BaseDataModel extends BmobObject {
+    private String title;
+    private String desc;
     private String targetUrl;
     private String htmlUrl;
     private String picUrl;
@@ -17,13 +17,14 @@ public class TextViewStudy extends BmobObject {
     private String projectTitle;
     private String demoUrl;
     private String permissionDesc;//侵权描述
+    private int showType;//0 原生 1 webview 2 Imageview
 
-    public String getTextViewTitle() {
-        return textViewTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public String getTextViewDesc() {
-        return textViewDesc;
+    public String getDesc() {
+        return desc;
     }
 
     public String getTargetUrl() {
@@ -52,5 +53,9 @@ public class TextViewStudy extends BmobObject {
 
     public String getPermissionDesc() {
         return permissionDesc;
+    }
+
+    public int getShowType() {
+        return showType;
     }
 }

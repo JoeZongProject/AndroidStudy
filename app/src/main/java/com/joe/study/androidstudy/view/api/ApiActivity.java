@@ -9,13 +9,10 @@ import com.joe.study.androidstudy.R;
 import com.joe.study.baselibrary.base.BaseActivity;
 import com.joe.study.baselibrary.util.StringUtils;
 import com.joe.study.baselibrary.util.UIHelper;
-import com.joe.study.baselibrary.util.okhttp.OkHttpUtils;
-import com.joe.study.baselibrary.util.okhttp.callback.StringCallback;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import okhttp3.Call;
 
 public class ApiActivity extends BaseActivity {
 
@@ -41,22 +38,22 @@ public class ApiActivity extends BaseActivity {
         }
         txtvResult.setText("");
         txtvResult.setText("PostUrl：http://10.1.12.185:8080/wxApp/api/v1/user/refreshToken");
-        OkHttpUtils.getInstance()
-                .post()
-                .url("http://10.1.12.185:8080/wxApp/api/v1/user/refreshToken")
-                .addParams("userNo", userNo)
-                .build()
-                .execute(new StringCallback() {
-                    @Override
-                    public void onError(Call call, Exception e, int id) {
-                        showResult("接口错误:" + e != null ? e.getMessage() : "Exception为null");
-                    }
-
-                    @Override
-                    public void onResponse(String response, int id) {
-                        showResult("服务器返回:" + response);
-                    }
-                });
+//        OkHttpUtils.getInstance()
+//                .post()
+//                .url("http://10.1.12.185:8080/wxApp/api/v1/user/refreshToken")
+//                .addParams("userNo", userNo)
+//                .build()
+//                .execute(new StringCallback() {
+//                    @Override
+//                    public void onError(Call call, Exception e, int id) {
+//                        showResult("接口错误:" + e != null ? e.getMessage() : "Exception为null");
+//                    }
+//
+//                    @Override
+//                    public void onResponse(String response, int id) {
+//                        showResult("服务器返回:" + response);
+//                    }
+//                });
     }
 
     private void showResult(String result) {

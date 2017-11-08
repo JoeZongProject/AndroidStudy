@@ -25,7 +25,7 @@
             android:textColor="@color/gray_9b9b9b"
             android:visibility="gone" />
 
-        <com.joe.study.androidstudy.widget.ProgressWebView
+        <com.joe.study.androidstudy.widget.ProgressX5WebView
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

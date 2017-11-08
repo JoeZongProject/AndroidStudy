@@ -52,7 +52,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     * toolar menu
+     * toolar menu 的布局ID
      *
      * @return
      */
